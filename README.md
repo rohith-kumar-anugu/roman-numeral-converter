@@ -70,7 +70,7 @@ The conversion algorithm uses a greedy approach to build Roman numerals:
 2. Starting with the largest value, repeatedly add the symbol to the result and subtract its value from the input number
 3. Continue until the input number becomes zero
 
-This approach guarantees the correct Roman numeral representation with optimal time complexity.
+This approach guarantees the Roman numeral representation with O(1) time and space complexity.
 
 ## Observability Implementation
 
@@ -192,15 +192,6 @@ npm test
 cd frontend
 npm test
 ```
-
-## Design Decisions
-
-### Choice of Technologies
-
-- **TypeScript**: Provides type safety and better code quality through static type checking.
-- **Express.js**: Lightweight and flexible Node.js framework for building web services.
-- **Pino**: High-performance, low-overhead logging library that produces structured JSON logs.
-- **React Spectrum**: Adobe's design system that provides accessible, responsive components that adapt to light and dark modes.
 
 ### Error Handling
 
