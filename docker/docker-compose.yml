@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.backend
+    container_name: roman-numeral-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.frontend
+    container_name: roman-numeral-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+networks:
+  default:
+    name: roman-numeral-network
